@@ -6,6 +6,7 @@ public abstract class Employee {
 
 	private String maNhanVien;
 	private String tenNhanVien;
+	private double luongCoBan;
 	
 	public abstract double luong();
 	
@@ -19,11 +20,14 @@ public abstract class Employee {
 		System.out.println("Nhap ten nhan vien: ");
 		tenNhanVien = sc.nextLine();
 		
+		System.out.println("Nhap Luong nhan vien: ");
+		luongCoBan = sc.nextDouble();
+		
 	}
 
 	public String XuatThongTin(){
 		
-		return String.format("%-10s|%-10s|",maNhanVien,tenNhanVien);
+		return String.format("%-10s|%-10s|%-10s",maNhanVien,tenNhanVien,luong());
 		
 	}
 
@@ -43,11 +47,20 @@ public abstract class Employee {
 		this.tenNhanVien = tenNhanVien;
 	}
 
+	public double getLuongCoBan() {
+		return luongCoBan;
+	}
+
+	public void setLuongCoBan(double luongCoBan) {
+		this.luongCoBan = luongCoBan;
+	}
 	
-	public Employee(String maNhanVien, String tenNhanVien) {
+
+	public Employee(String maNhanVien, String tenNhanVien, double luongCoBan) {
 		super();
 		this.maNhanVien = maNhanVien;
 		this.tenNhanVien = tenNhanVien;
+		this.luongCoBan = luongCoBan;
 	}
 
 	public Employee() {

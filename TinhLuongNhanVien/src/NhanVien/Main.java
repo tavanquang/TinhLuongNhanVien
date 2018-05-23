@@ -21,14 +21,12 @@ public class Main {
 		System.out.print("Nhap so nhan vien Programmer n = ");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		
 		for(int i = 0; i < n; i++){
 			System.out.println("\nNhap nhan vien Programmer so " +(i+1));
 			Programmer pro = new Programmer();
 			pro.NhapThongTin();
 			listPro.add(pro);
 		}
-		
 	}
 	
 	public static void NhapNhanVienTester(){
